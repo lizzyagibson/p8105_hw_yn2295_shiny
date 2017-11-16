@@ -20,7 +20,7 @@ library(shiny)
 ```
 
 ```{r accessing_and_cleaning_data}
-ny_noaa_data_tidy = read_csv("./nynoaadat.zip") %>%
+ny_noaa_data_tidy = read_csv("./nynoaadat.csv") %>%
   clean_names() %>%
   drop_na() %>%
   separate(date, into = c("year", "month", "day"), "-") %>%
